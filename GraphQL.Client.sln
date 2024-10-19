@@ -31,7 +31,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{05CAF9B2-981E-40C0-AE31-5FA56E351F12}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\branches.yml = .github\workflows\branches.yml
-		.github\workflows\master.yml = .github\workflows\master.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQL.Primitives", "src\GraphQL.Primitives\GraphQL.Primitives.csproj", "{87FC440E-6A4D-47D8-9EB2-416FC31CC4A6}"
@@ -63,9 +62,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQL.Client.Example", "examples\GraphQL.Client.Example\GraphQL.Client.Example.csproj", "{6B13B87D-1EF4-485F-BC5D-891E2F4DA6CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{98D4DDDD-DE15-4997-B888-9BC806C7416C}"
-	ProjectSection(SolutionItems) = preProject
-		.github\dependabot.yml = .github\dependabot.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
