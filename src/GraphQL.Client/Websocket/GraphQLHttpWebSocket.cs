@@ -162,7 +162,7 @@ internal class GraphQLHttpWebSocket : IDisposable
 
                     var disposable = new CompositeDisposable(
                         observable.Subscribe(observer),
-                        Disposable.Create(async () =>
+                        Disposable.Create(() =>
                         {
                             Debug.WriteLine($"disposing subscription {startRequest.Id}, websocket state is '{WebSocketState}'");
                             // only try to send close request on open websocket
@@ -172,10 +172,10 @@ internal class GraphQLHttpWebSocket : IDisposable
                             try
                             {
                                 Debug.WriteLine($"sending stop message on subscription {startRequest.Id}");
-                                await QueueWebSocketRequest(stopRequest).ConfigureAwait(false);
+                                QueueWebSocketRequest(stopRequest).GetAwaiter().GetResult();
                             }
                             // do not break on disposing
-                            catch (OperationCanceledException) { }
+                            catch (Exception) { }
                         })
                     );
 
