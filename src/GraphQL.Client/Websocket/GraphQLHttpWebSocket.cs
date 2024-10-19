@@ -175,7 +175,7 @@ internal class GraphQLHttpWebSocket : IDisposable
                                 QueueWebSocketRequest(stopRequest).GetAwaiter().GetResult();
                             }
                             // do not break on disposing
-                            catch (Exception) { }
+                            catch (OperationCanceledException) { }
                         })
                     );
 
